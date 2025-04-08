@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
+from pymongo import MongoClient
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -96,21 +97,9 @@ TEMPLATES = [
 WSGI_APPLICATION = "octofit_tracker.wsgi.application"
 
 
-# Database
-# https://docs.djangoproject.com/en/4.1/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'djongo',
-        'NAME': 'octofit',
-        'HOST': 'localhost',
-        'PORT': 27017,
-        'USER': '',  # Add MongoDB username if authentication is enabled
-        'PASSWORD': '',  # Add MongoDB password if authentication is enabled
-        'AUTH_SOURCE': 'admin',  # Default authentication database
-        'AUTH_MECHANISM': 'SCRAM-SHA-1',  # Default authentication mechanism
-    }
-}
+# MongoDB connection setup
+MONGO_CLIENT = MongoClient('mongodb://localhost:27017/')
+MONGO_DB = MONGO_CLIENT['octofit']
 
 
 # Password validation
