@@ -97,9 +97,17 @@ TEMPLATES = [
 WSGI_APPLICATION = "octofit_tracker.wsgi.application"
 
 
-# MongoDB connection setup
-MONGO_CLIENT = MongoClient('mongodb://localhost:27017/')
-MONGO_DB = MONGO_CLIENT['octofit']
+# Database
+# https://docs.djangoproject.com/en/4.1/ref/settings/#databases
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'djongo',
+        'NAME': 'octofit',
+        'HOST': 'localhost',
+        'PORT': 27017,
+    }
+}
 
 
 # Password validation
