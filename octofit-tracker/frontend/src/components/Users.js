@@ -4,7 +4,7 @@ function Users() {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    fetch('https://humble-space-couscous-p945665gj7726w67-8000.app.github.dev/api/users')
+    fetch('https://humble-space-couscous-p945665gj7726w67-8000.app.github.dev/api/users/')
       .then(response => response.json())
       .then(data => setUsers(data));
   }, []);

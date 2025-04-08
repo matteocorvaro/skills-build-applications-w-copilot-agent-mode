@@ -4,7 +4,7 @@ function Activities() {
   const [activities, setActivities] = useState([]);
 
   useEffect(() => {
-    fetch('https://humble-space-couscous-p945665gj7726w67-8000.app.github.dev/api/activities')
+    fetch('https://humble-space-couscous-p945665gj7726w67-8000.app.github.dev/api/activities/')
       .then(response => response.json())
       .then(data => setActivities(data));
   }, []);

@@ -4,7 +4,7 @@ function Leaderboard() {
   const [leaderboard, setLeaderboard] = useState([]);
 
   useEffect(() => {
-    fetch('https://humble-space-couscous-p945665gj7726w67-8000.app.github.dev/api/leaderboard')
+    fetch('https://humble-space-couscous-p945665gj7726w67-8000.app.github.dev/api/leaderboard/')
       .then(response => response.json())
       .then(data => setLeaderboard(data));
   }, []);
