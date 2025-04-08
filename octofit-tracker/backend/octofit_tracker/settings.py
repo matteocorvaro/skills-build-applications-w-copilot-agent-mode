@@ -38,7 +38,6 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "corsheaders",
-    "octofit",
     "rest_framework",
 ]
 
@@ -94,7 +93,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "octofit.wsgi.application"
+WSGI_APPLICATION = "octofit_tracker.wsgi.application"
 
 
 # Database
