@@ -76,7 +76,7 @@ CORS_ALLOW_HEADERS = [
     'x-requested-with',
 ]
 
-ROOT_URLCONF = "octofit.urls"
+ROOT_URLCONF = "octofit_tracker.urls"
 
 TEMPLATES = [
     {
@@ -106,6 +106,10 @@ DATABASES = {
         'NAME': 'octofit',
         'HOST': 'localhost',
         'PORT': 27017,
+        'USER': '',  # Add MongoDB username if authentication is enabled
+        'PASSWORD': '',  # Add MongoDB password if authentication is enabled
+        'AUTH_SOURCE': 'admin',  # Default authentication database
+        'AUTH_MECHANISM': 'SCRAM-SHA-1',  # Default authentication mechanism
     }
 }
 
